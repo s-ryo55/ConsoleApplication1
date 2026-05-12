@@ -1,15 +1,30 @@
 ﻿// ConsoleApplication1.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
-
 #include <iostream>
+#include <algorithm>
+#include <string>
 
-int main()
-{
-    for (auto i = 0; i < 100; i++)
-    {
-        std::cout << "Hello World!\n";
+using namespace std;
+
+
+int main() {
+    string s = "Hello World!";
+    int count = 0;
+
+    for (int i = 0; i < 10; i++) {
+        count++;
+
+        string out = s;
+
+        // 偶数回だけ反転
+        if (count % 2 == 0) {
+            reverse(out.begin(), out.end());
+        }
+
+        cout << out << "\n";
     }
 }
+
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
 // プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニュー
