@@ -8,21 +8,44 @@ using namespace std;
 
 
 int main() {
-    string s = "Hello World!";
-    int count = 0;
+    //string s = "Hello World!";
+    //int count = 0;
 
-    for (int i = 0; i < 10; i++) {
-        count++;
+    //for (int i = 0; i < 10; i++) {
+    //    count++;
 
-        string out = s;
+    //    string out = s;
 
-        // 偶数回だけ反転
-        if (count % 2 == 0) {
-            reverse(out.begin(), out.end());
+    //    // 偶数回だけ反転
+    //    if (count % 2 == 0) {
+    //        reverse(out.begin(), out.end());
+    //    }
+
+    //    cout << out << "\n";
+    //}
+
+
+
+    auto forwoard = string("Hello World");
+    auto reverse = forwoard;
+
+    std::reverse(reverse.begin(),reverse.end());
+
+    auto i = 10;
+
+    while (i--)     
+    {
+        if (i & 1) 
+        {
+            cout << reverse << endl;
+        }
+        else 
+        {
+			cout << forwoard << endl;
         }
 
-        cout << out << "\n";
     }
+
 }
 
 
